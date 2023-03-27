@@ -1,0 +1,54 @@
+name: starter_app
+description: A Sample Brick template for our Flutter Apps following a syntx by Cephas
+
+# The following defines the brick repository url.
+# Uncomment and update the following line before publishing the brick.
+# repository: https://github.com/my_org/my_repo
+
+# The following defines the version and build number for your brick.
+# A version number is three numbers separated by dots, like 1.2.34
+# followed by an optional build number (separated by a +).
+version: 0.1.0+1
+
+# The following defines the environment for the current brick.
+# It includes the version of mason that the brick requires.
+environment:
+  mason: ">=0.1.0-dev.48 <0.1.0"
+
+# Variables specify dynamic values that your brick depends on.
+# Zero or more variables can be specified for a given brick.
+# Each variable has:
+#  * a type (string, number, boolean, enum, or array)
+#  * an optional short description
+#  * an optional default value
+#  * an optional list of default values (array only)
+#  * an optional prompt phrase used when asking for the variable
+#  * a list of values (enums only)
+vars:
+  screen_name:
+    type: string
+    description: This is the name of the screen you are trying to create
+    prompt: What is the screen name?
+  uses_state_management:
+    type: boolean
+    description: Checks whether this screen requires its own state management outside the global one used by the entire app
+    prompt: Does this screen use its own state management?
+
+# * command
+# * if it uses state management, create a folder called provider and in that, create a provider file for that screen
+# {{#uses_state_management}}provider{{/uses_state_management}}/{{screen_name}}_providers.dart
+# * Also use the same checker in the {{screen_name}}_exporter.dart
+# {{#uses_state_management}}export ...{{/uses_state_management}}
+
+# App Screens Structure
+# The following defines the screen structure for the brick.
+# lib
+# ├── screens
+#     ├── {{screen_name}}
+#     ├── {{screen_name}}.dart
+#     ├── components
+#     ├── {{screen_name}}_body.dart
+#     ├── {{screen_name}}_exporter.dart
+# -- Incase of state management for this screen
+#     ├── {{screen_name}}_providers.dart
+#   ├── exporter.dart

@@ -1,0 +1,24 @@
+
+## Variables
+ * Screen Name: home
+ * Is a Consumer Widget: true
+ * Uses State Management: true
+
+Now in the different cases
+
+- Screen Name (Lower Case): home
+
+- Screen Name (Upper Case): HOME
+
+- Screen Name (Title Case): Home
+
+- Screen Name (Sentence Case): Home
+
+- Screen Name (Camel Case): home
+
+- Screen Name (Pascal Case): Home
+
+- Screen Name (Snake Case): home
+
+- Screen Name (Dot Case): home
+

@@ -1,0 +1,12 @@
+# TO disable some analysis rules in our code, we use this
+
+analyzer:
+  exclude:
+    # - brick_name
+    - __brick__/** 
+    # - __brick__/lib/global/responsive/**
+    # - __brick__/lib/global/constants/**
+    # - __brick__/lib/global/functions/**
+    # - __brick__/lib/global/theme/**
+    # - __brick__/lib/global/**
+    # - __brick__/lib/app/**

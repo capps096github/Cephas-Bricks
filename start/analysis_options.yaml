@@ -1,0 +1,7 @@
+# TO disable some analysis rules in our code, we use this
+
+analyzer:
+  exclude:
+    # - brick_name
+    - starter_app/** 
+    - demo/** 

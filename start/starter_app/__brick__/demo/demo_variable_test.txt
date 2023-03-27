@@ -1,0 +1,24 @@
+
+## Variables
+ * Screen Name: {{screen_name}}
+ * Is a Consumer Widget: {{is_consumer_widget}}
+ * Uses State Management: {{uses_state_management}}
+
+Now in the different cases
+
+- Screen Name (Lower Case): {{screen_name.lowerCase()}}
+
+- Screen Name (Upper Case): {{screen_name.upperCase()}}
+
+- Screen Name (Title Case): {{screen_name.titleCase()}}
+
+- Screen Name (Sentence Case): {{screen_name.sentenceCase()}}
+
+- Screen Name (Camel Case): {{screen_name.camelCase()}}
+
+- Screen Name (Pascal Case): {{screen_name.pascalCase()}}
+
+- Screen Name (Snake Case): {{screen_name.snakeCase()}}
+
+- Screen Name (Dot Case): {{screen_name.dotCase()}}
+
