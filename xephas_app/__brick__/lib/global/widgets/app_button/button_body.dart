@@ -1,4 +1,4 @@
-import '../../../calcut_exporter.dart';
+import '../../../{{app_name}}_exporter.dart';
 
 class ButtonBody extends ConsumerWidget {
   const ButtonBody({
@@ -27,10 +27,10 @@ class ButtonBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    final buttonTextStyle = Theme.of(context).textTheme.labelLarge!.copyWith(
-          fontWeight: FontWeight.w900,
-          fontFamily: calcutFontFamily,
-        );
+    final buttonTextStyle = TextStyle(
+      fontWeight: FontWeight.w900,
+      fontFamily: calcutFontFamily,
+    );
 
     VisualDensity density = Theme.of(context).visualDensity;
 
@@ -44,6 +44,10 @@ class ButtonBody extends ConsumerWidget {
     /// True if It has an Icon
     final hasIconData = (iconData != null);
     final hasIconWidget = (iconWidget != null);
+    final hasIcon = (hasIconData || hasIconWidget);
+
+    // elevation
+    final elevation = isHovered ? spacing8 : spacing0;
 
     //
     return AnimatedContainer(
@@ -51,26 +55,26 @@ class ButtonBody extends ConsumerWidget {
       duration: fiftyMilliseconds,
       decoration: BoxDecoration(
         color: isHovered ? buttonColor.withOpacity(.15) : calcutTransparent,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: borderRadius8,
       ),
       padding: isHovered ? padding2 : (isDesktop ? padding2 : padding0),
       clipBehavior: Clip.antiAlias,
       // for good looking UI o mobile we set this height to 42
-      height: isDesktop ? 56 : calcutButtonHeight,
+      height: isDesktop ? kDesktopButtonHeight : kButtonHeight,
       child: Tooltip(
         message: toolTip ?? text,
         textStyle: TextStyle(color: buttonColor),
         decoration: BoxDecoration(
           color: textColor,
-          borderRadius: BorderRadius.circular(4),
+          borderRadius: borderRadius4,
         ),
-        child: (hasIconData || hasIconWidget)
+        child: hasIcon
             ? ElevatedButton.icon(
                 onPressed: onTap,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: buttonColor,
                   foregroundColor: textColor,
-                  elevation: isHovered ? 8 : 0,
+                  elevation: elevation,
                   shadowColor: textColor.withOpacity(.15),
                   visualDensity: density,
                   textStyle: buttonTextStyle,
@@ -79,16 +83,14 @@ class ButtonBody extends ConsumerWidget {
                   text,
                   maxLines: 1,
                 ),
-                icon: hasIconData
-                    ? Icon(iconData, color: textColor)
-                    : iconWidget!,
+                icon: iconWidget ?? Icon(iconData, color: textColor),
               )
             : ElevatedButton(
                 onPressed: onTap,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: buttonColor,
                   foregroundColor: textColor,
-                  elevation: isHovered ? 8 : 0,
+                  elevation: elevation,
                   visualDensity: density,
                   shadowColor: textColor.withOpacity(.15),
                   textStyle: buttonTextStyle,

@@ -48,7 +48,7 @@ class _AppButtonState extends State<AppButton> {
 
     ///This variable declares that if we are on phone
     ///, no mouse region, else we gat a mouse region
-    final isPhone = (!isCalcutWeb &&
+    final isPhone = (!is{{app_name.pascalCase()}}Web &&
         (TargetPlatform.android == platform || TargetPlatform.iOS == platform));
 
     return isPhone
@@ -64,12 +64,8 @@ class _AppButtonState extends State<AppButton> {
             isSmallButton: widget.isSmallButton,
           )
         : MouseRegion(
-            onHover: (_) => setState(() {
-              isHovered = true;
-            }),
-            onExit: (_) => setState(() {
-              isHovered = false;
-            }),
+            onHover: (_) => setState(() => isHovered = true),
+            onExit: (_) => setState(() => isHovered = false),
             child: ButtonBody(
               buttonColor: widget.buttonColor,
               toolTip: widget.toolTip,
@@ -78,9 +74,10 @@ class _AppButtonState extends State<AppButton> {
               iconData: widget.icon,
               iconWidget: widget.iconWidget,
               onTap: () {
-                setState(() {
-                  isHovered = false;
-                });
+                // disable hovering
+                setState(() => isHovered = false);
+                
+                // call onTap
                 widget.onTap();
               },
               isHovered: isHovered,
@@ -89,3 +86,4 @@ class _AppButtonState extends State<AppButton> {
           );
   }
 }
+

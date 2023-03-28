@@ -27,5 +27,20 @@ environment:
 vars:
   app_name:
     type: string
-    description: This is the name of the app you are trying to create
-    prompt: What is the app name? (Using flutter app name conventions i.e app_name) or (using dart package name conventions i.e app_name) or (just lowercase app name i.e appname)
+    description: This is the name or nick-name of the app 
+    prompt: What is the app name or nick-name? (Using flutter app name conventions i.e app_name) or (using dart package name conventions i.e app_name) or (just lowercase app name i.e appname)
+
+  app_title:
+    type: string
+    description: This is the title of the app
+    prompt: What is the app title? (Using App Title Syntax i.e <App Name> | <Brief App Description>)
+
+  primary_color_code:
+    type: string
+    description: This is the primary color code of the app
+    prompt: What is the primary color code of the app? (Using Hexadecimal Color Code without the "#" at the start i.e 000000)
+
+  secondary_color_code:
+    type: string
+    description: This is the secondary color code of the app
+    prompt: What is the secondary color code of the app? (Using Hexadecimal Color Code without the "#" at the start i.e FFFFFF)

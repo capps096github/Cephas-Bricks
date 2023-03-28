@@ -25,3 +25,11 @@ A few resources to get you started if this is your first brick template:
 [5]: https://youtu.be/qjA0JFiPMnQ
 [6]: https://youtu.be/o8B1EfcUisw
 [7]: https://youtu.be/LXhgiF5HiQg
+
+## Usage
+
+To use this brick, run the following command: we prefer using a json file to generate the brick since it contains many variables, and any existing files will be overwritten
+
+```bash
+mason make xephas_app -c name_of_json_file.json --on-conflict overwrite
+````

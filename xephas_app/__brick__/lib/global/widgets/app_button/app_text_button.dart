@@ -21,7 +21,7 @@ class AppTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final buttonTextStyle = Theme.of(context).textTheme.bodyMedium!.copyWith(
+    final buttonTextStyle = TextStyle(
           color: textColor,
           fontSize: 16,
         );
@@ -33,7 +33,7 @@ class AppTextButton extends StatelessWidget {
       textStyle: TextStyle(color: buttonColor),
       decoration: BoxDecoration(
         color: textColor,
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: borderRadius4,
       ),
       child: TextButton(
         onPressed: onTap,

@@ -3,7 +3,7 @@
 analyzer:
   exclude:
     # - brick_name
-    - __brick__/** 
+    # - __brick__/** 
     # - __brick__/lib/global/responsive/**
     # - __brick__/lib/global/constants/**
     # - __brick__/lib/global/functions/**

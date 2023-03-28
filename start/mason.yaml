@@ -4,6 +4,7 @@ bricks:
     git:
       url: "https://github.com/felangel/mason.git"
       path: bricks/widget
-
   starter_app:
     path: starter_app
+  xephas_app:
+    path: "..\\xephas_app"

@@ -5,10 +5,10 @@ import 'dart:math' as math;
 
 // TODO pass incolor codes here as variables
 // {{app_name.camelCase()}} Color
-const {{app_name.camelCase()}}Color = Color(0xFFA81124);
+const {{app_name.camelCase()}}Color = Color(0xFF{{primary_color_code.upperCase()}});
 
 // {{app_name.camelCase()}} secondary color
-const {{app_name.camelCase()}}SecondaryColor = Color(0xFFA81124);
+const {{app_name.camelCase()}}SecondaryColor = Color(0xFF{{secondary_color_code.upperCase()}});
 
 // {{app_name.camelCase()}} background
 const {{app_name.camelCase()}}Background = Color(0xFFE5E5E5);

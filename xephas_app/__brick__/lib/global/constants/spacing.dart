@@ -20,3 +20,6 @@ const double spacing4 = 4.0;
 
 /// 2 spacing = 2.0
 const double spacing2 = 2.0;
+
+/// 0 spacing = 0.0
+const double spacing0 = 0.0;
