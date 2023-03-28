@@ -1,7 +1,7 @@
 name: xephas_app
 description: A starter app template that has been designed by Xephas as per his coding style when he's creating new apps for projects he's working on
 
-# The following defines the brick repository url.
+# * The following defines the brick repository url.
 # Uncomment and update the following line before publishing the brick.
 # repository: https://github.com/my_org/my_repo
 

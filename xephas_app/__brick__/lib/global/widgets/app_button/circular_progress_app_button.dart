@@ -1,4 +1,4 @@
-import '../../../calcut_exporter.dart';
+import '../../../{{app_name}}_exporter.dart';
 
 class CircularProgressAppButton extends StatelessWidget {
   const CircularProgressAppButton({

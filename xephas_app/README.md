@@ -32,4 +32,123 @@ To use this brick, run the following command: we prefer using a json file to gen
 
 ```bash
 mason make xephas_app -c name_of_json_file.json --on-conflict overwrite
-````
+```
+
+## Variables
+
+These are highlighted in the json file, but here is a list of the variables that can be used to generate the brick: as listed in brick.yaml file
+
+- app_name
+- app_title
+- primary_color_code
+- secondary_color_code
+
+## Output
+
+This will generate the following directory structure:
+
+```bash
+        lib
+        │   main.dart
+        │   {{app_name}}_exporter.dart
+        │   {{app_name}}_todo.dart
+        │   {{app_name}}_variable_test.txt
+        │
+        ├───app
+        │       exporter.dart
+        │       {{app_name}}.dart
+        │       {{app_name}}_splash.dart
+        │
+        ├───data
+        │   │   exporter.dart
+        │   │
+        │   ├───cloud
+        │   │       exporter.dart
+        │   │
+        │   ├───mock
+        │   │       exporter.dart
+        │   │
+        │   └───model
+        │           exporter.dart
+        │
+        ├───global
+        │   │   exporter.dart
+        │   │
+        │   ├───constants
+        │   │       border_radius.dart
+        │   │       dimens.dart
+        │   │       durations.dart
+        │   │       exporter.dart
+        │   │       formatters.dart
+        │   │       margins.dart
+        │   │       padding.dart
+        │   │       platforms.dart
+        │   │       spacing.dart
+        │   │       strings.dart
+        │   │
+        │   ├───functions
+        │   │       exporter.dart
+        │   │       links_launcher.dart
+        │   │
+        │   ├───responsive
+        │   │       exporter.dart
+        │   │       {{app_name}}_responsive.dart
+        │   │       {{app_name}}_responsive_builder.dart
+        │   │
+        │   ├───theme
+        │   │       colors.dart
+        │   │       exporter.dart
+        │   │       theme.dart
+        │   │
+        │   └───widgets
+        │       │   disclaimer.dart
+        │       │   dividers.dart
+        │       │   dot.dart
+        │       │   entrance_fader.dart
+        │       │   exporter.dart
+        │       │   placeholder.dart
+        │       │   spaces.dart
+        │       │
+        │       └───app_button
+        │               app_button.dart
+        │               app_text_button.dart
+        │               button_body.dart
+        │               circular_progress_app_button.dart
+        │               exporter.dart
+        │
+        ├───providers
+        │       exporter.dart
+        │       go_router_provider.dart
+        │       user_provider.dart
+        │
+        ├───routes
+        │       error_page.dart
+        │       exporter.dart
+        │       paths.dart
+        │       routes.dart
+        │
+        └───screens
+            │   exporter.dart
+            │
+            ├───auth
+            │       auth.dart
+            │       exporter.dart
+            │
+            ├───home
+            │       exporter.dart
+            │       home.dart
+            │
+            ├───settings
+            │       exporter.dart
+            │       settings.dart
+            │
+            └───user
+                    exporter.dart
+
+```
+
+## Packages Used
+
+They appear in {{app_name}}\_exporter.dart and are cupertino_icons, flutter_riverpod, go_router, url_launcher, intl, google_fonts, animations
+
+## Contributing

@@ -27,19 +27,18 @@ class ButtonBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    final buttonTextStyle = TextStyle(
-      fontWeight: FontWeight.w900,
-      fontFamily: calcutFontFamily,
-    );
+
 
     VisualDensity density = Theme.of(context).visualDensity;
 
     final width = MediaQuery.of(context).size.width;
 
-    // responsiveness
-    final calcutResponsive = ref.watch(calcutResponsiveProvider(context));
+    // TODO responsiveness
+       // final {{app_name.camelCase()}}Responsive = ref.watch({{app_name.camelCase()}}ResponsiveProvider(context));
+       final {{app_name.camelCase()}}Responsive = {{app_name.pascalCase()}}Responsive(context: context);
 
-    final isDesktop = calcutResponsive.isDesktopScreen;
+
+    final isDesktop = {{app_name.camelCase()}}Responsive.isDesktopScreen;
 
     /// True if It has an Icon
     final hasIconData = (iconData != null);
@@ -54,7 +53,7 @@ class ButtonBody extends ConsumerWidget {
       width: isSmallButton ? null : (isDesktop ? width * .6 : width),
       duration: fiftyMilliseconds,
       decoration: BoxDecoration(
-        color: isHovered ? buttonColor.withOpacity(.15) : calcutTransparent,
+        color: isHovered ? buttonColor.withOpacity(.15) : {{app_name.camelCase()}}Transparent,
         borderRadius: borderRadius8,
       ),
       padding: isHovered ? padding2 : (isDesktop ? padding2 : padding0),
@@ -77,7 +76,6 @@ class ButtonBody extends ConsumerWidget {
                   elevation: elevation,
                   shadowColor: textColor.withOpacity(.15),
                   visualDensity: density,
-                  textStyle: buttonTextStyle,
                 ),
                 label: Text(
                   text,
@@ -93,7 +91,6 @@ class ButtonBody extends ConsumerWidget {
                   elevation: elevation,
                   visualDensity: density,
                   shadowColor: textColor.withOpacity(.15),
-                  textStyle: buttonTextStyle,
                 ),
                 child: Text(
                   text,

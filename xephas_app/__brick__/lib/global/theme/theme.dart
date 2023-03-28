@@ -10,7 +10,7 @@ class {{app_name.pascalCase()}}Theme {
     static ThemeData get light {
 
       // text theme
-      final TextTheme lightTheme = ThemeData.light().textTheme;
+      final TextTheme textTheme = ThemeData.light().textTheme;
 
       // TODO put app font here, default is Lato
       const textStyleFunction = GoogleFonts.lato;
@@ -35,7 +35,7 @@ class {{app_name.pascalCase()}}Theme {
       tooltipTheme: TooltipThemeData(
         textStyle: const TextStyle(color: {{app_name.camelCase()}}Color),
         decoration: BoxDecoration(
-          color: thumbsAccent,
+          color: {{app_name.camelCase()}}SecondaryColor,
           borderRadius:borderRadius4,
         ),
       ),

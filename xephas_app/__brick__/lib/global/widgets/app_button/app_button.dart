@@ -1,4 +1,4 @@
-import '../../../{{app_name}}_.dart';
+import '../../../{{app_name}}_exporter.dart';
 import 'button_body.dart';
 
 class AppButton extends StatefulWidget {

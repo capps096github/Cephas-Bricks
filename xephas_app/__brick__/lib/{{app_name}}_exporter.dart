@@ -13,6 +13,13 @@ export 'package:go_router/go_router.dart';
 // url_launcher
 export 'package:url_launcher/url_launcher.dart';
 
+// google_fonts
+export 'package:google_fonts/google_fonts.dart';
+
+// animations
+export 'package:animations/animations.dart';
+
+
 //? app folders
 //* app
 export 'app/exporter.dart';
