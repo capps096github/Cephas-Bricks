@@ -147,6 +147,13 @@ This will generate the following directory structure:
 
 ```
 
+and
+
+```bash
+        test
+            widget_test.dart
+```
+
 ## Packages Used
 
 They appear in {{app_name}}\_exporter.dart and are cupertino_icons, flutter_riverpod, go_router, url_launcher, intl, google_fonts, animations
