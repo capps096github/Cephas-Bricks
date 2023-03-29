@@ -5,6 +5,8 @@ App Template Variables *As Entered By You
 
 - App Name:  {{app_name}}
 
+- App Description: {{app_description}}
+
 - App Title: {{app_title}}
 
 - Primary Color: {{primary_color_code}}
