@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'dart:math' as math;
 
-// TODO pass incolor codes here as variables
 // {{app_name.camelCase()}} Color
 const {{app_name.camelCase()}}Color = Color(0xFF{{primary_color_code.upperCase()}});
 

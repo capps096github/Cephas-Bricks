@@ -2,9 +2,6 @@
 import '../../{{app_name}}_exporter.dart';
 
 
-// TODO make this provider based by generating the theme provider in the provider folder
-final {{app_name.camelCase()}}Theme = {{app_name.pascalCase()}}Theme.light;
-
 class {{app_name.pascalCase()}}Theme {
   
     static ThemeData get light {
@@ -32,8 +29,8 @@ class {{app_name.pascalCase()}}Theme {
         ),
       ),
       //* -- tooltip
-      tooltipTheme: TooltipThemeData(
-        textStyle: const TextStyle(color: {{app_name.camelCase()}}Color),
+      tooltipTheme:const TooltipThemeData(
+        textStyle:  TextStyle(color: {{app_name.camelCase()}}Color),
         decoration: BoxDecoration(
           color: {{app_name.camelCase()}}SecondaryColor,
           borderRadius:borderRadius4,

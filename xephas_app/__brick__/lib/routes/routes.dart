@@ -1,10 +1,9 @@
 import '../../{{app_name}}_exporter.dart';
 
 ///* this provides the default router delegate for the app
-// TODO make this a provider under providers/go_router_provider.dart 
 
 // router delegate
-final goRouterProvider = GoRouter(
+final {{app_name}}Router = GoRouter(
   initialLocation: initialPath,
   restorationScopeId: {{app_name.camelCase()}}AppId,
   // turn off history tracking in the browser for all navigation

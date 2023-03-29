@@ -21,8 +21,8 @@ class {{app_name.pascalCase()}}ResponsiveBuilder extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // responsiveness
-    // final {{app_name.camelCase()}}Responsive = ref.watch({{app_name.camelCase()}}ResponsiveProvider(context));
-    final {{app_name.camelCase()}}Responsive = {{app_name.pascalCase()}}Responsive(context: context);
+    final {{app_name.camelCase()}}Responsive = ref.watch({{app_name.camelCase()}}ResponsiveProvider(context));
+    // final {{app_name.camelCase()}}Responsive = {{app_name.pascalCase()}}Responsive(context: context);
 
 
     final isDesktop = {{app_name.camelCase()}}Responsive.isDesktopScreen;

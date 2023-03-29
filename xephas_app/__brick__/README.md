@@ -1,8 +1,19 @@
 # {{app_name}}
 
+## {{app_title}}
+
 {{app_description}}
 
-To generate this app, set the mason variables in the file named `app.json` in the root directory of this project.
+To generate this app, set the mason variables in the file named `app_temp.json` in the root directory of this project.
+
+Run the command `flutter pub run build_runner watch -d` to generate riverpod files and finish the setup.
+
+Here's the command combined into one line:
+
+```bash
+& mason make xephas_app -c app_temp.json --on-conflict overwrite; flutter pub run build_runner watch -d
+
+```
 
 ## Getting Started
 

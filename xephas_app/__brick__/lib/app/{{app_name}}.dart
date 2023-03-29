@@ -6,9 +6,10 @@ class {{app_name.pascalCase()}} extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    //TODO go router access to build the app
-    // final goRouter = ref.watch({{app_name.camelCase()}}RouterProvider);
-    final goRouter = goRouterProvider;
+    final goRouter = ref.watch(goRouterProvider);
+    // final goRouter = goRouterProvider;
+
+    final {{app_name.camelCase()}}Theme = ref.watch({{app_name.camelCase()}}ThemeProvider);
 
     return MaterialApp.router(
       // -- Router --

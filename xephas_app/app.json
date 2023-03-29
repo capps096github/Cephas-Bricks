@@ -1,6 +1,7 @@
 {
   "app_name": "app name",
-  "app_title": "brief description",
+  "app_title": "brief title",
+  "app_description": "app description of the app",
   "primary_color_code": "525000",
   "secondary_color_code": "200E32"
 }
