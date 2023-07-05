@@ -1,4 +1,6 @@
--------------------- 
+--------------------
+This file is auto-generated after you create your app using mason cli
+ 
 App Template Variables *As Entered By You
 --------------------
 
@@ -12,6 +14,8 @@ App Template Variables *As Entered By You
 - Primary Color: {{primary_color_code}}
 
 - Secondary Color: {{secondary_color_code}}
+
+- Background Color: {{background_color_code}}
 
 
 Run the command `flutter pub run build_runner watch -d` to generate riverpod files and finish the setup.

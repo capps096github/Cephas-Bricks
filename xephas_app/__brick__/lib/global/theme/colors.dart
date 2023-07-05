@@ -10,7 +10,7 @@ const {{app_name.camelCase()}}Color = Color(0xFF{{primary_color_code.upperCase()
 const {{app_name.camelCase()}}SecondaryColor = Color(0xFF{{secondary_color_code.upperCase()}});
 
 // {{app_name.camelCase()}} background
-const {{app_name.camelCase()}}Background = Color(0xFFE5E5E5);
+const {{app_name.camelCase()}}Background = Color(0xFF{{background_color_code.upperCase()}});
 
 // {{app_name.camelCase()}} white
 const {{app_name.camelCase()}}White = Color(0xFFFFFFFF);
