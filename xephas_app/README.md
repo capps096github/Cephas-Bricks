@@ -1,5 +1,7 @@
 # xephas_app
 
+This one was discontinued and transferred to its own separate repo named as [xephas_app](https://)
+
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 
 A starter app template that has been designed by Xephas as per his coding style when he's creating new apps for projects he's working on
@@ -162,6 +164,16 @@ tree
 
 ## Packages Used
 
-They appear in **{{app_name}}\_exporter.dart and are cupertino_icons, flutter_riverpod, go_router, url_launcher, intl, google_fonts, animations
+They appear in `{{app_name}}\_exporter.dart` and are
+
+- cupertino_icons
+- flutter_riverpod
+- go_router
+- url_launcher
+- intl
+- google_fonts
+- animations
 
 ## Contributing
+
+A pull request can be made and the after review it will be merged into the main branch
