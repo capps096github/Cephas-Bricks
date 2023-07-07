@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import '../../{{app_name}}_exporter.dart';
+import '../../{{app_name.snakeCase()}}_exporter.dart';
 
 class {{app_name.pascalCase()}}Placeholder extends StatelessWidget {
   ///This is a placeholder widget used to render blank sample screens in the app

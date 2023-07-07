@@ -72,7 +72,10 @@ c) (Optional) to test if the `xephas_app` brick was got from github run the comm
 mason ls
 ```
 
-### 3.2 From Local Storage
+### 3.2 From Local Storage (Preferred) 
+
+This also comes with Hooks for installing all packages and plugins needed for the app to run
+
 Incase the brick already exists on your machine, or incase you have cloned this repo folder containing the mason brick, You can then generate the brick locally via
 
 ```bash
@@ -81,6 +84,7 @@ Incase the brick already exists on your machine, or incase you have cloned this 
 ```
 
 For example, the command below assumes that the brick named `xephas_app` exists in the location `E:\Cephas-Bricks\xephas_app` however `\\` escape character is used to represent `\`
+
 ```bash
   xephas_app:
     path: "E:\\Cephas-Bricks\\xephas_app"
@@ -103,8 +107,9 @@ These are highlighted in the json file, but here is a list of the variables that
 - secondary_color_code
   > The secondary color code of the app? (Using Hexadecimal Color Code without the "#" at the start i.e 000000)
 - background_color_code
-  > The background color code of the app? (Using Hexadecimal Color Code without the "#" at the start i.e 000000)
-
+  > The background color code of the app? (Using Hexadecimal Color Code without the "#" at the start i.e 000000), `default is E5E5E5`
+- has_nabar
+  > This is checks if the app requres a navbar so as to generate the navbar folder, `default is true`
 
 ### 4.2. Create a json file to generate the brick
 
@@ -118,7 +123,9 @@ A sample json file labeled `project_name.json` is shown below
   "app_title": "title of the app mostly used for SEO",
   "app_description": "Brief description of the app",
   "primary_color_code": "primary color",
-  "secondary_color_code": "seconday color"
+  "secondary_color_code": "seconday color",
+  "background_color_code": "200E32",
+  "has_nav_bar": true
 }
 ```
 
@@ -145,14 +152,14 @@ This will generate the following directory structure, startiung with `lib` at th
 ```bash
         lib
         │   main.dart
-        │   {{app_name}}_exporter.dart
-        │   {{app_name}}_todo.dart
-        │   {{app_name}}_variable_test.txt
+        │   {{app_name.snakeCase()}}_exporter.dart
+        │   {{app_name.snakeCase()}}_todo.dart
+        │   {{app_name.snakeCase()}}_variable_test.txt
         │
         ├───app
         │       exporter.dart
-        │       {{app_name}}.dart
-        │       {{app_name}}_splash.dart
+        │       {{app_name.snakeCase()}}.dart
+        │       {{app_name.snakeCase()}}_splash.dart
         │
         ├───data
         │   │   exporter.dart
@@ -187,8 +194,8 @@ This will generate the following directory structure, startiung with `lib` at th
         │   │
         │   ├───responsive
         │   │       exporter.dart
-        │   │       {{app_name}}_responsive.dart
-        │   │       {{app_name}}_responsive_builder.dart
+        │   │       {{app_name.snakeCase()}}_responsive.dart
+        │   │       {{app_name.snakeCase()}}_responsive_builder.dart
         │   │
         │   ├───theme
         │   │       colors.dart

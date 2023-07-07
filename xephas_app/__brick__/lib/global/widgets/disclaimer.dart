@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 
-import '../../{{app_name}}_exporter.dart';
+import '../../{{app_name.snakeCase()}}_exporter.dart';
 
 class {{app_name.pascalCase()}}Disclaimer extends StatelessWidget {
   const {{app_name.pascalCase()}}Disclaimer({super.key,

@@ -1,4 +1,4 @@
-import '../../{{app_name}}_exporter.dart';
+import '../../{{app_name.snakeCase()}}_exporter.dart';
 
 class {{app_name.pascalCase()}}Settings extends ConsumerWidget {
   const {{app_name.pascalCase()}}Settings({super.key});

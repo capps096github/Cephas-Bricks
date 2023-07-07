@@ -19,10 +19,15 @@ export 'package:google_fonts/google_fonts.dart';
 // animations
 export 'package:animations/animations.dart';
 
+// uuid
+export 'package:uuid/uuid.dart';
 
 //? app folders
 //* app
 export 'app/exporter.dart';
+
+//* data
+export 'data/exporter.dart';
 
 //* global
 export 'global/exporter.dart';

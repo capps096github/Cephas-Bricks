@@ -1,4 +1,4 @@
-import '../../{{app_name}}_exporter.dart';
+import '../../{{app_name.snakeCase()}}_exporter.dart';
 
 
 /// This class will be used to provide all responsiveness needed in the app

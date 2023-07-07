@@ -1,6 +1,6 @@
 // Project imports:
 
-import '../../{{app_name}}_exporter.dart';
+import '../../{{app_name.snakeCase()}}_exporter.dart';
 
 ///this is a horizontal divider
 class ThickHorizontalDivider extends StatelessWidget {

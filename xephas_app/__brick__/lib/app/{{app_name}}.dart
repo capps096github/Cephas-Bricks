@@ -1,14 +1,13 @@
-import '../{{app_name}}_exporter.dart';
+import '../{{app_name.snakeCase()}}_exporter.dart';
 
 class {{app_name.pascalCase()}} extends ConsumerWidget {
-  ///This is the root of our {{app_name}} app
+  ///This is the root of our {{app_name.snakeCase()}} app
   const {{app_name.pascalCase()}}({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final goRouter = ref.watch(goRouterProvider);
-    // final goRouter = goRouterProvider;
-
+  
     final {{app_name.camelCase()}}Theme = ref.watch({{app_name.camelCase()}}ThemeProvider);
 
     return MaterialApp.router(

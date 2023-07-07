@@ -1,8 +1,13 @@
-import '{{app_name}}_exporter.dart';
+import '{{app_name.snakeCase()}}_exporter.dart';
 
+// ignore: depend_on_referenced_packages
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // to remove the # from the web url
+  usePathUrlStrategy();
 
   //
   runApp(

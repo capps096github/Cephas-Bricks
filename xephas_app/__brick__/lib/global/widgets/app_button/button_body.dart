@@ -1,4 +1,4 @@
-import '../../../{{app_name}}_exporter.dart';
+import '../../../{{app_name.snakeCase()}}_exporter.dart';
 
 class ButtonBody extends ConsumerWidget {
   const ButtonBody({
@@ -34,7 +34,6 @@ class ButtonBody extends ConsumerWidget {
     final width = MediaQuery.of(context).size.width;
 
        final {{app_name.camelCase()}}Responsive = ref.watch({{app_name.camelCase()}}ResponsiveProvider(context));
-      //  final {{app_name.camelCase()}}Responsive = {{app_name.pascalCase()}}Responsive(context: context);
 
 
     final isDesktop = {{app_name.camelCase()}}Responsive.isDesktopScreen;

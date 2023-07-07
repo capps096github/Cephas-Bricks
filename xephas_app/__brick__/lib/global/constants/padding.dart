@@ -1,4 +1,4 @@
-import '../../{{app_name}}_exporter.dart';
+import '../../{{app_name.snakeCase()}}_exporter.dart';
 
 /// * App Paddings following the 8px grid system
 
@@ -25,3 +25,16 @@ const padding32 = EdgeInsets.all(spacing32);
 
 // padding 40
 const padding40 = EdgeInsets.all(spacing40);
+
+//* Vertical Paddings
+const verticalPadding4 = EdgeInsets.symmetric(vertical: spacing4);
+
+// padding 8
+const verticalPadding8 = EdgeInsets.symmetric(vertical: spacing8);
+
+// * Horizontal Paddings
+// 4
+const horizontalPadding4 = EdgeInsets.symmetric(horizontal: spacing4);
+
+//
+const horizontalPadding8 = EdgeInsets.symmetric(horizontal: spacing8);

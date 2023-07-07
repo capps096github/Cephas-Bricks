@@ -1,4 +1,3 @@
-
 // * All paths are defined here for app navigation
 
 // initial path

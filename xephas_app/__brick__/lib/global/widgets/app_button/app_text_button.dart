@@ -1,4 +1,4 @@
-import '../../../{{app_name}}_exporter.dart';
+import '../../../{{app_name.snakeCase()}}_exporter.dart';
 
 class AppTextButton extends StatelessWidget {
   const AppTextButton({
@@ -22,9 +22,9 @@ class AppTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final buttonTextStyle = TextStyle(
-          color: textColor,
-          fontSize: 16,
-        );
+      color: textColor,
+      fontSize: 16,
+    );
 
     VisualDensity density = Theme.of(context).visualDensity;
 

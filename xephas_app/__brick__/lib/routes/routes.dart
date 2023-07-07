@@ -1,13 +1,14 @@
-import '../../{{app_name}}_exporter.dart';
+import '../../{{app_name.snakeCase()}}_exporter.dart';
 
 ///* this provides the default router delegate for the app
+final goRouterProvider = Provider<GoRouter>((ref) {
+  return {{app_name.camelCase()}}Router;
+});
 
 // router delegate
-final {{app_name}}Router = GoRouter(
+final {{app_name.camelCase()}}Router = GoRouter(
   initialLocation: initialPath,
   restorationScopeId: {{app_name.camelCase()}}AppId,
-  // turn off history tracking in the browser for all navigation
-  // routerNeglect: true,
   routes: [
     //* home page
     GoRoute(
@@ -31,15 +32,11 @@ final {{app_name}}Router = GoRouter(
   ],
 
   redirect: (_, state) {
-    // if the user is not logged in, redirect to the auth page
+    //TODO if the user is not logged in, redirect to the auth page
 
-    // if the user is logged in, don't redirect to any page just continue with the initial path
+    //TODO if the user is logged in, don't redirect to any page just continue with the initial path
     return null;
   },
-  //
-  // refreshListenable: GoRouterRefreshStream(
-  //   stream: FirebaseAuth.instance.authStateChanges(),
-  // ),
   errorBuilder: (context, state) => {{app_name.pascalCase()}}ErrorScreen(error: state.error),
   // log diagnostic info for your routes
   debugLogDiagnostics: true,

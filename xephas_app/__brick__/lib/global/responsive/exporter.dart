@@ -1,2 +1,3 @@
-export '{{app_name}}_responsive.dart';
-export '{{app_name}}_responsive_builder.dart';
+export 'responsive.dart';
+export 'responsive_builder.dart';
+export 'responsive_provider.dart';

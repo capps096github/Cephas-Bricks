@@ -1,6 +1,10 @@
 
-import '../../{{app_name}}_exporter.dart';
+import '../../{{app_name.snakeCase()}}_exporter.dart';
 
+///* this provides the default theme for the app
+final {{app_name.camelCase()}}ThemeProvider = Provider<ThemeData>((ref) {
+  return {{app_name.pascalCase()}}Theme.light;
+});
 
 class {{app_name.pascalCase()}}Theme {
   
@@ -16,18 +20,22 @@ class {{app_name.pascalCase()}}Theme {
       useMaterial3: true,
       brightness: Brightness.light,
       colorSchemeSeed: {{app_name.camelCase()}}Color,
+
       //* -- Visual Density
       visualDensity: VisualDensity.adaptivePlatformDensity,
+
       //* -- Appbar
       appBarTheme: AppBarTheme(
         centerTitle: true,
-        backgroundColor: {{app_name.camelCase()}}Color,
-        titleTextStyle: GoogleFonts.poppins(
+        // backgroundColor: {{app_name.camelCase()}}Color,
+      // TODO put app font here, default is Lato
+        titleTextStyle: GoogleFonts.lato(
           fontSize: 20,
           fontWeight: FontWeight.w700,
           color: {{app_name.camelCase()}}White,
         ),
       ),
+
       //* -- tooltip
       tooltipTheme:const TooltipThemeData(
         textStyle:  TextStyle(color: {{app_name.camelCase()}}Color),
@@ -36,6 +44,7 @@ class {{app_name.pascalCase()}}Theme {
           borderRadius:borderRadius4,
         ),
       ),
+
       //* -- text button
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
@@ -44,6 +53,7 @@ class {{app_name.pascalCase()}}Theme {
           ),
         ),
       ),
+
       //* Text Theme
       textTheme: TextTheme(
         displayLarge: textStyleFunction(textStyle: textTheme.displayLarge),

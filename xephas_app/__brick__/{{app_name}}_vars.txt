@@ -5,7 +5,7 @@ App Template Variables *As Entered By You
 --------------------
 
 
-- App Name:  {{app_name}}
+- App Name:  {{app_name.snakeCase()}}
 
 - App Description: {{app_description}}
 

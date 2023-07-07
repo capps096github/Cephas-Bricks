@@ -6,8 +6,7 @@ Future<void> run(HookContext context) async {
       context.logger.progress('Almost done ... Now Installing packages');
 
   // add the following packages to pubspec.yaml
-  // as they appear in {{app_name}}_exporter.dart
-  // cupertino_icons, flutter_riverpod, go_router, url_launcher, intl, google_fonts, animations
+  // as they appear in {{app_name.snakeCase()}}_exporter.dart
   await Process.run(
     'dart',
     [
@@ -17,8 +16,11 @@ Future<void> run(HookContext context) async {
       'go_router',
       'url_launcher',
       'intl',
+      'uuid',
       'google_fonts',
       'animations',
+      'cached_network_image',
+      'cupertino_icons',
       // riverpod and its generator files
       'flutter_riverpod',
       'riverpod_annotation',

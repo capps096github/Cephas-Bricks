@@ -1,5 +1,5 @@
 
-import '../../{{app_name}}_exporter.dart';
+import '../../{{app_name.snakeCase()}}_exporter.dart';
 
 class {{app_name.pascalCase()}}ResponsiveBuilder extends ConsumerWidget {
   const {{app_name.pascalCase()}}ResponsiveBuilder({
@@ -22,8 +22,6 @@ class {{app_name.pascalCase()}}ResponsiveBuilder extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // responsiveness
     final {{app_name.camelCase()}}Responsive = ref.watch({{app_name.camelCase()}}ResponsiveProvider(context));
-    // final {{app_name.camelCase()}}Responsive = {{app_name.pascalCase()}}Responsive(context: context);
-
 
     final isDesktop = {{app_name.camelCase()}}Responsive.isDesktopScreen;
     final isTablet = {{app_name.camelCase()}}Responsive.isTabletScreen;

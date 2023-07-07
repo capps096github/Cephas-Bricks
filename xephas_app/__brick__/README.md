@@ -1,10 +1,10 @@
-# {{app_name}}
+# {{app_name.snakeCase()}}
 
 ## {{app_title}}
 
 {{app_description}}
 
-To generate this app, set the mason variables in the file named `{{app_name}}.json` in the root directory of this project.
+To generate this app, set the mason variables in the file named `{{app_name.snakeCase()}}.json` in the root directory of this project.
 
 Run the command `flutter pub run build_runner watch -d` to generate riverpod files and finish the setup.
 

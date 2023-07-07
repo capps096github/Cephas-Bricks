@@ -1,2 +1,2 @@
-export '{{app_name}}.dart';
-export '{{app_name}}_splash.dart';
+export '{{app_name.snakeCase()}}.dart';
+export '{{app_name.snakeCase()}}_splash.dart';
