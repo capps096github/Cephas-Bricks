@@ -2,8 +2,10 @@ import 'dart:io';
 import 'package:mason/mason.dart';
 
 Future<void> run(HookContext context) async {
-  final progress =
-      context.logger.progress('- Now Installing packages');
+  final progress = context.logger.progress('...');
+
+  // * Install packages
+  context.logger.info('\n- Installing packages');
 
   // add the following packages to pubspec.yaml
   // as they appear in {{app_name.snakeCase()}}_exporter.dart
@@ -36,18 +38,29 @@ Future<void> run(HookContext context) async {
   await Process.run('dart', ['pub', 'get']);
 
   // Packages installed successfully!
-  context.logger.success('\nPackages installed successfully!');
+  context.logger.success('\n✓ Packages installed successfully!');
+
+  // * Run `dart run custom_lint` to enable riverpod based lints in your project.
+  context.logger.info('\n- Adding lints to your app');
+
+  // command to add lints to your app
+  await Process.run('dart', ['run', 'custom_lint']);
+
+  // Lints added successfully!
+  context.logger.success('\n✓ Lints added successfully!');
 
   //* Format generated files with dart format .
   // Run `dart format` after generation.
-  context.logger.info('\n\n- Formatting all generated files ...');
+  context.logger.info('\n- Formatting all generated files');
 
-  //* Format generated files with dart format .
+  // command to format all generated files
   await Process.run('dart', ['format', '.']);
 
   // format complete
-  context.logger.success('\nFormatting completed successfully!\n');
+  context.logger.success('\n✓ Formatting completed successfully!\n');
 
   // * All complete
+  context.logger.success('\n✓ App Generated successfully, Happy Coding!');
+
   progress.complete();
 }

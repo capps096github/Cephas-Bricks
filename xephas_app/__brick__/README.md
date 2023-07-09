@@ -4,17 +4,6 @@
 
 {{app_description}}
 
-To generate this app, set the mason variables in the file named `{{app_name.snakeCase()}}.json` in the root directory of this project.
-
-Run the command `flutter pub run build_runner watch -d` to generate riverpod files and finish the setup.
-
-Here's the command combined into one line:
-
-```bash
-& mason make xephas_app -c {{app_name.snakeCase()}}.json --on-conflict overwrite; flutter pub run build_runner watch -d
-
-```
-
 ## Getting Started
 
 This app is built with [Flutter](https://flutter.dev/), a cross-platform mobile development framework. To get started, follow the [Flutter installation guide](https://flutter.dev/docs/get-started/install).

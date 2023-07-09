@@ -56,6 +56,6 @@ class SliverEmptySpace extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(child: EmptySpace());
+    return const SliverToBoxAdapter(child: EmptySpace());
   }
 }

@@ -1,5 +1,6 @@
 import 'package:mason/mason.dart';
 
 void run(HookContext context) {
-  // add pre-generation logic.
+  // inform the user that the generation has started
+  context.logger.success('✓ App Generation Started');
 }
