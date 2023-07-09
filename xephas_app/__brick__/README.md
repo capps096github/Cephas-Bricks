@@ -11,7 +11,7 @@ Run the command `flutter pub run build_runner watch -d` to generate riverpod fil
 Here's the command combined into one line:
 
 ```bash
-& mason make xephas_app -c app_temp.json --on-conflict overwrite; flutter pub run build_runner watch -d
+& mason make xephas_app -c {{app_name.snakeCase()}}.json --on-conflict overwrite; flutter pub run build_runner watch -d
 
 ```
 
