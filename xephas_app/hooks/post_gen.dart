@@ -3,7 +3,7 @@ import 'package:mason/mason.dart';
 
 Future<void> run(HookContext context) async {
   final progress =
-      context.logger.progress('Almost done ... Now Installing packages');
+      context.logger.progress('- Now Installing packages');
 
   // add the following packages to pubspec.yaml
   // as they appear in {{app_name.snakeCase()}}_exporter.dart
@@ -40,13 +40,13 @@ Future<void> run(HookContext context) async {
 
   //* Format generated files with dart format .
   // Run `dart format` after generation.
-  context.logger.info('\nFormatting generated files ...');
+  context.logger.info('\n\n- Formatting all generated files ...');
 
   //* Format generated files with dart format .
   await Process.run('dart', ['format', '.']);
 
   // format complete
-  context.logger.success('\nFormat complete!');
+  context.logger.success('\nFormatting completed successfully!\n');
 
   // * All complete
   progress.complete();

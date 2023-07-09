@@ -146,6 +146,20 @@ b) To use this brick, run the following command:
 mason make xephas_app -c project_name.json --on-conflict overwrite
 ```
 
+c) Incase your using this brick together with the [`mason_gitignore`][8] brick, you can use the combined command below
+
+i) Run the 2 commands sequentially, like one after the other
+
+```bash
+mason make xephas_app -c project_name.json --on-conflict overwrite ; mason make mason_gitignore -c project_name.json --on-conflict append
+```
+
+ii) Or run the 2 commands in parallel, like at the same time
+
+```bash
+& mason make xephas_app -c project_name.json --on-conflict overwrite ; mason make mason_gitignore -c project_name.json --on-conflict append
+```
+
 ## 5. Output
 
 This will generate the following directory structure, starting with `lib` at the root of your project.
