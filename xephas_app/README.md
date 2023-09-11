@@ -303,6 +303,14 @@ project_name_vars.txt
 
 ```
 
+## Add Packages used to your project
+
+Run the following command
+
+```bash
+flutter pub add go_router url_launcher intl uuid google_fonts animations cached_network_image cupertino_icons flutter_riverpod riverpod_annotation dev:build_runner dev:custom_lint dev:riverpod_generator dev:riverpod_lint
+```
+
 ## Packages Used
 
 They appear in `project_name_exporter.dart` and are
