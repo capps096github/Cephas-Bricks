@@ -39,6 +39,12 @@ flutter create project_name
 
 ## 2. Initialize mason in the project via the command below
 
+- Activate from https://pub.dev
+```bash
+dart pub global activate mason_cli
+```
+
+- Initialize Bash
 ```bash
 mason init
 ```
