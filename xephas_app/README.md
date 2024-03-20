@@ -79,7 +79,7 @@ c) (Optional) to test if the `xephas_app` brick was got from github run the comm
 mason ls
 ```
 
-### 3.2 From Local Storage (Preferred)
+### 3.2 From Local Storage (Preferred) - `Skip this if you used Methode 3.1 above`
 
 This also comes with Hooks for installing all packages and plugins needed for the app to run
 
