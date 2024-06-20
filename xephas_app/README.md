@@ -39,6 +39,12 @@ flutter create project_name
 
 ## 2. Initialize mason in the project via the command below
 
+- Activate from https://pub.dev
+```bash
+dart pub global activate mason_cli
+```
+
+- Initialize Bash
 ```bash
 mason init
 ```
@@ -73,7 +79,7 @@ c) (Optional) to test if the `xephas_app` brick was got from github run the comm
 mason ls
 ```
 
-### 3.2 From Local Storage (Preferred)
+### 3.2 From Local Storage (Preferred) - `Skip this if you used Methode 3.1 above`
 
 This also comes with Hooks for installing all packages and plugins needed for the app to run
 
@@ -301,6 +307,14 @@ project_name.json
 # ignore the variable test file
 project_name_vars.txt
 
+```
+
+## Add Packages used to your project
+
+Run the following command
+
+```bash
+flutter pub add go_router url_launcher intl uuid google_fonts animations cached_network_image cupertino_icons flutter_riverpod riverpod_annotation dev:build_runner dev:custom_lint dev:riverpod_generator dev:riverpod_lint
 ```
 
 ## Packages Used
