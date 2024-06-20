@@ -27,7 +27,7 @@ void printer(
 
 /// this class is responsible for printing the text on the screen with color
 class AppPrinter {
-// logger
+/// logger
   static final logger = Logger(
     printer: PrettyPrinter(
         methodCount: 2, // Number of method calls to be displayed
