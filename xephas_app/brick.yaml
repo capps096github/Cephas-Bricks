@@ -8,7 +8,7 @@ repository: https://github.com/capps096github/Cephas-Bricks/tree/master/xephas_a
 # The following defines the version and build number for your brick.
 # A version number is three numbers separated by dots, like 1.2.34
 # followed by an optional build number (separated by a +).
-version: 0.4.0+4
+version: 0.5.0+0
 
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
@@ -55,9 +55,3 @@ vars:
     description: This is the background color code of the app
     prompt: What is the background color code of the app? (Using Hexadecimal Color Code without the "#" at the start i.e 000000)
     default: E5E5E5
-
-  has_navbar:
-    type: boolean
-    description: This is a boolean value that determines if the app has a navigation bar or not
-    prompt: Does the app have a navigation bar?
-    default: true
