@@ -2,5 +2,5 @@
 
 analyzer:
   exclude:
-    - __brick__/**
+    # - __brick__/**
     - hooks/**

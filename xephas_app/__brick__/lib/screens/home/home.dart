@@ -1,4 +1,4 @@
-import '../../{{app_name.snakeCase()}}_exporter.dart';
+import '../../app_exporter.dart';
 
 class {{app_name.pascalCase()}}Home extends StatelessWidget {
   const {{app_name.pascalCase()}}Home({super.key});

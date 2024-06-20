@@ -22,7 +22,7 @@ export 'package:animations/animations.dart';
 // uuid
 export 'package:uuid/uuid.dart';
 
-//? app folders
+//? ---- app folders -----
 //* app
 export 'app/exporter.dart';
 
@@ -37,6 +37,3 @@ export 'routes/exporter.dart';
 
 // *screens
 export 'screens/exporter.dart';
-
-// * providers
-export 'providers/exporter.dart';

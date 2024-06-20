@@ -1,4 +1,4 @@
-import '../../{{app_name.snakeCase()}}_exporter.dart';
+import '../../app_exporter.dart';
 
 ///* this provides the default router delegate for the app
 final goRouterProvider = Provider<GoRouter>((ref) {
@@ -38,6 +38,12 @@ final {{app_name.camelCase()}}Router = GoRouter(
     return null;
   },
   errorBuilder: (context, state) => {{app_name.pascalCase()}}ErrorScreen(error: state.error),
-  // log diagnostic info for your routes
+   onException: (context, state, _) => ErrorDisplay(
+      error: state.error.toString(),
+      stackTrace: StackTrace.current,
+    ), 
+    // log diagnostic info for your routes
   debugLogDiagnostics: true,
 );
+
+});

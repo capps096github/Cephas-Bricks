@@ -1,4 +1,4 @@
-import '../{{app_name.snakeCase()}}_exporter.dart';
+import '../app_exporter.dart';
 
 class {{app_name.pascalCase()}} extends ConsumerWidget {
   ///This is the root of our {{app_name.snakeCase()}} app
@@ -8,15 +8,15 @@ class {{app_name.pascalCase()}} extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final goRouter = ref.watch(goRouterProvider);
   
-    final {{app_name.camelCase()}}Theme = ref.watch({{app_name.camelCase()}}ThemeProvider);
+    final appTheme = ref.watch(appThemeProvider);
 
     return MaterialApp.router(
       // -- Router --
       routerConfig: goRouter,
 
       // -- Theme --
-      color: {{app_name.camelCase()}}Color,
-      theme: {{app_name.camelCase()}}Theme,
+      color: appColor,
+      theme: appTheme,
 
       // -- Title --
       title: {{app_name.camelCase()}}Title,

@@ -1,11 +1,12 @@
+import '../../app_exporter.dart';
 
-import '../../{{app_name.snakeCase()}}_exporter.dart';
-
-class {{app_name.pascalCase()}}ResponsiveBuilder extends ConsumerWidget {
-  const {{app_name.pascalCase()}}ResponsiveBuilder({
+/// Responsive builder
+class AppResponsiveBuilder extends ConsumerWidget {
+  /// [AppResponsiveBuilder] constructor
+  const AppResponsiveBuilder({
     required this.mobile,
-    this.tablet,
     required this.desktop,
+    this.tablet,
     super.key,
   });
 
@@ -21,10 +22,10 @@ class {{app_name.pascalCase()}}ResponsiveBuilder extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // responsiveness
-    final {{app_name.camelCase()}}Responsive = ref.watch({{app_name.camelCase()}}ResponsiveProvider(context));
+    final wcmcsResponsive = ref.watch(appResponsiveProvider(context));
 
-    final isDesktop = {{app_name.camelCase()}}Responsive.isDesktopScreen;
-    final isTablet = {{app_name.camelCase()}}Responsive.isTabletScreen;
+    final isDesktop = wcmcsResponsive.isDesktopScreen;
+    final isTablet = wcmcsResponsive.isTabletScreen;
 
     if (isDesktop) {
       return desktop;

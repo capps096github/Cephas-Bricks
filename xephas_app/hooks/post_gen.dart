@@ -8,7 +8,7 @@ Future<void> run(HookContext context) async {
   context.logger.info('\n- Installing packages');
 
   // add the following packages to pubspec.yaml
-  // as they appear in {{app_name.snakeCase()}}_exporter.dart
+  // as they appear in app_exporter.dart
   await Process.run(
     'dart',
     [
@@ -23,14 +23,21 @@ Future<void> run(HookContext context) async {
       'animations',
       'cached_network_image',
       'cupertino_icons',
+      'restart_app',
+      'logger',
+
       // riverpod and its generator files
       'flutter_riverpod',
       'riverpod_annotation',
+
       // riverpod dev dependencies
       'dev:build_runner',
       'dev:custom_lint',
       'dev:riverpod_generator',
       'dev:riverpod_lint'
+
+      // lints
+      'dev:very_good_analysis'
     ],
   );
 
@@ -58,6 +65,16 @@ Future<void> run(HookContext context) async {
 
   // format complete
   context.logger.success('\n✓ Formatting completed successfully!\n');
+
+  //* Fix any issues with the generated files
+  // Run `dart format` after generation.
+  context.logger.info('\n- Fixing any issues with the generated files');
+
+  // command to format all generated files
+  await Process.run('dart', ['fix', '--apply']);
+
+  // format complete
+  context.logger.success('\n✓ Fix successful!\n');
 
   // * All complete
   context.logger.success('\n✓ App Generated successfully, Happy Coding!');

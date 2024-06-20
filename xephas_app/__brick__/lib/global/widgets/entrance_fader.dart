@@ -1,4 +1,4 @@
-import '../../{{app_name.snakeCase()}}_exporter.dart';
+import '../../app_exporter.dart';
 
 class EntranceFader extends StatefulWidget {
   const EntranceFader({

@@ -1,4 +1,4 @@
-import '../../{{app_name.snakeCase()}}_exporter.dart';
+import '../../app_exporter.dart';
 
 //* Margins following the 8px grid system
 

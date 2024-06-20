@@ -1,10 +1,10 @@
 import 'package:flutter/gestures.dart';
 
-import '../../{{app_name.snakeCase()}}_exporter.dart';
+import '../../app_exporter.dart';
 
 class {{app_name.pascalCase()}}Disclaimer extends StatelessWidget {
   const {{app_name.pascalCase()}}Disclaimer({super.key,
-  this.continuingColor = {{app_name.camelCase()}}Color,
+  this.continuingColor = appColor,
     this.termsPrivacycolor = {{app_name.camelCase()}}SecondaryColor,
   });
 

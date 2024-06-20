@@ -12,3 +12,6 @@ export 'constants/exporter.dart';
 
 // * functions
 export 'functions/exporter.dart';
+
+// * providers
+export 'providers/exporter.dart';

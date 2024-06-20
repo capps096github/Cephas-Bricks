@@ -1,8 +1,12 @@
+// ignore_for_file: avoid_build_context_in_providers
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../{{app_name.snakeCase()}}_exporter.dart';
+import '../../app_exporter.dart';
 
-//* this provides the overall responsiveness of our app
+part 'responsive_provider.g.dart';
 
-final {{app_name.camelCase()}}ResponsiveProvider = Provider.family<{{app_name.pascalCase()}}Responsive, BuildContext>((ref, ctx) {
-  return {{app_name.pascalCase()}}Responsive(context: ctx);
-});
+/// This is the App Responsive Provider
+@riverpod
+AppResponsive appResponsive(AppResponsiveRef ref, BuildContext context) {
+  return AppResponsive(context: context);
+}

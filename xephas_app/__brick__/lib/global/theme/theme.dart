@@ -1,25 +1,26 @@
-
-import '../../{{app_name.snakeCase()}}_exporter.dart';
+import '../../app_exporter.dart';
 
 ///* this provides the default theme for the app
-final {{app_name.camelCase()}}ThemeProvider = Provider<ThemeData>((ref) {
-  return {{app_name.pascalCase()}}Theme.light;
+final appThemeProvider = Provider<ThemeData>((ref) {
+  return AppTheme.light;
 });
 
-class {{app_name.pascalCase()}}Theme {
-  
-    static ThemeData get light {
+/// font
+final appFontFamily = GoogleFonts.montserrat().fontFamily;
 
-      // text theme
-      final TextTheme textTheme = ThemeData.light().textTheme;
+/// This is the default theme for the app
+class AppTheme {
+  /// light theme
+  static ThemeData get light {
+    // text theme
+    final textTheme = ThemeData.light().textTheme;
 
-      // TODO put app font here, default is Lato
-      const textStyleFunction = GoogleFonts.lato;
+    const textStyleFunction = GoogleFonts.montserrat;
 
-      return ThemeData(
+    return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
-      colorSchemeSeed: {{app_name.camelCase()}}Color,
+      colorSchemeSeed: appColor,
 
       //* -- Visual Density
       visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -27,29 +28,29 @@ class {{app_name.pascalCase()}}Theme {
       //* -- Appbar
       appBarTheme: AppBarTheme(
         centerTitle: true,
-        // backgroundColor: {{app_name.camelCase()}}Color,
-      // TODO put app font here, default is Lato
-        titleTextStyle: GoogleFonts.lato(
+        elevation: 0,
+        scrolledUnderElevation: 0,
+        foregroundColor: appWhite,
+        titleTextStyle: GoogleFonts.montserrat(
           fontSize: 20,
           fontWeight: FontWeight.w700,
-          color: {{app_name.camelCase()}}White,
         ),
       ),
 
       //* -- tooltip
-      tooltipTheme:const TooltipThemeData(
-        textStyle:  TextStyle(color: {{app_name.camelCase()}}Color),
+      tooltipTheme: const TooltipThemeData(
+        textStyle: TextStyle(color: appColor),
         decoration: BoxDecoration(
-          color: {{app_name.camelCase()}}SecondaryColor,
-          borderRadius:borderRadius4,
+          color: appNavy,
+          borderRadius: borderRadius4,
         ),
       ),
 
       //* -- text button
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
-          padding: MaterialStateProperty.all(
-           padding16
+          padding: WidgetStateProperty.all(
+            padding16,
           ),
         ),
       ),
@@ -73,5 +74,5 @@ class {{app_name.pascalCase()}}Theme {
         labelSmall: textStyleFunction(textStyle: textTheme.labelSmall),
       ),
     );
-    }
+  }
 }

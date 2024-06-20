@@ -140,7 +140,7 @@ rmdir lib
 
 b) To use this brick, run the following command:
 
-*_we prefer using a json file to generate the brick since it contains many variables, and any existing files will be overwritten_*
+we prefer using a _json file to generate the brick since it contains many variables, and any existing files will be overwritten_
 
 ```bash
 mason make xephas_app -c project_name.json --on-conflict overwrite
@@ -167,7 +167,7 @@ This will generate the following directory structure, starting with `lib` at the
 ```bash
         lib
         │   main.dart
-        │   {{app_name.snakeCase()}}_exporter.dart
+        │   app_exporter.dart
         │   {{app_name.snakeCase()}}_todo.dart
         │   {{app_name.snakeCase()}}_variable_test.txt
         │

@@ -1,12 +1,12 @@
-import '../../{{app_name.snakeCase()}}_exporter.dart';
-
+import '../../app_exporter.dart';
 
 /// This class will be used to provide all responsiveness needed in the app
-class {{app_name.pascalCase()}}Responsive {
-// context
-  final BuildContext context;
+class AppResponsive {
+  /// Constructor for the WcmcsResponsive class
+  AppResponsive({required this.context});
 
-  {{app_name.pascalCase()}}Responsive({required this.context});
+  /// context
+  final BuildContext context;
 
   ///If the `Current Screen Width` is for the `SmallMobile i.e <300`
   static bool isSmallMobile(BuildContext context) =>
@@ -42,16 +42,16 @@ class {{app_name.pascalCase()}}Responsive {
 
   /// getter for isMobile or isMediumMobile or isSmallMobile
   bool get isMobileScreen =>
-      {{app_name.pascalCase()}}Responsive.isMobile(context) ||
-      {{app_name.pascalCase()}}Responsive.isMediumMobile(context) ||
-      {{app_name.pascalCase()}}Responsive.isSmallMobile(context);
+      AppResponsive.isMobile(context) ||
+      AppResponsive.isMediumMobile(context) ||
+      AppResponsive.isSmallMobile(context);
 
   /// getter for isTablet or isMediumTablet or isLargeTablet
   bool get isTabletScreen =>
-      {{app_name.pascalCase()}}Responsive.isTablet(context) ||
-      {{app_name.pascalCase()}}Responsive.isMediumTablet(context) ||
-      {{app_name.pascalCase()}}Responsive.isLargeTablet(context);
+      AppResponsive.isTablet(context) ||
+      AppResponsive.isMediumTablet(context) ||
+      AppResponsive.isLargeTablet(context);
 
   /// getter for isDesktop
-  bool get isDesktopScreen => {{app_name.pascalCase()}}Responsive.isDesktop(context);
+  bool get isDesktopScreen => AppResponsive.isDesktop(context);
 }
