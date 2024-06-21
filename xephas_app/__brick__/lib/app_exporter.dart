@@ -7,6 +7,12 @@ export 'package:cupertino_icons/cupertino_icons.dart';
 // flutter_riverpod
 export 'package:flutter_riverpod/flutter_riverpod.dart';
 
+// flutter_svg
+export 'package:flutter_svg/flutter_svg.dart';
+
+// flextras
+export 'package:flextras/flextras.dart';
+
 // go_router
 export 'package:go_router/go_router.dart';
 
@@ -25,9 +31,6 @@ export 'package:uuid/uuid.dart';
 //? ---- app folders -----
 //* app
 export 'app/exporter.dart';
-
-//* data
-export 'data/exporter.dart';
 
 //* global
 export 'global/exporter.dart';

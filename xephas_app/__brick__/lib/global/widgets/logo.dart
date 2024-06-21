@@ -1,6 +1,6 @@
 import '../../app_exporter.dart';
 
-/// Small Size of the wcmcs Logo
+/// Small Size of the app Logo
 class AppLogo extends StatelessWidget {
   /// [AppLogo]  constructor
   const AppLogo({

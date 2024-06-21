@@ -1,7 +1,9 @@
 import '../../app_exporter.dart';
 
-class {{app_name.pascalCase()}}Home extends StatelessWidget {
-  const {{app_name.pascalCase()}}Home({super.key});
+/// This is the home screen of the app
+class AppHome extends StatelessWidget {
+  /// [AppHome] constructor
+  const AppHome({super.key});
 
   @override
   Widget build(BuildContext context) {

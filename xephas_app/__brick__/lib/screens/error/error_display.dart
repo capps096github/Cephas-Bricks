@@ -90,7 +90,7 @@ class ErrorDisplay extends StatelessWidget {
               textColor: errorColor,
               iconWidget: const AppLogo(logoSize: 24, logoColor: errorColor),
               onTap: () {
-                Restart.restartApp(webOrigin: homePath);
+                Restart.restartApp(webOrigin: initialPath);
               },
             ),
           ],

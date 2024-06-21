@@ -1,7 +1,8 @@
 import '../app_exporter.dart';
 
+  ///This is the root of our {{app_name.pascalCase()}} app
 class {{app_name.pascalCase()}} extends ConsumerWidget {
-  ///This is the root of our {{app_name.snakeCase()}} app
+  /// [{{app_name.pascalCase()}}] constructor
   const {{app_name.pascalCase()}}({super.key});
 
   @override

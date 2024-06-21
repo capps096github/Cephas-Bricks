@@ -24,11 +24,6 @@ class AppBackButton extends ConsumerWidget {
         color: iconColor,
       ),
       onPressed: () {
-        /// show ad
-        //
-
-        /// set
-
         /// pop page, if possible show ads
         (path != null) ? go(ref, to: path!) : context.pop();
       },

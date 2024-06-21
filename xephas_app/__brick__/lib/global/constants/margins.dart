@@ -2,10 +2,10 @@ import '../../app_exporter.dart';
 
 ///* Margins following the 8px grid system
 
-//// 32 margin
+/// 32 margin
 const EdgeInsets margin32 = EdgeInsets.all(spacing32);
 
-//// 16 margin
+/// 16 margin
 const EdgeInsets margin16 = EdgeInsets.all(spacing16);
 
 /// 8 margin
@@ -20,6 +20,8 @@ const EdgeInsets margin2 = EdgeInsets.all(spacing2);
 /// 0 margin
 const EdgeInsets margin0 = EdgeInsets.zero;
 
+// * verticals
+
 /// vertical margin 4
 const EdgeInsets marginV4 = EdgeInsets.symmetric(vertical: 4);
 
@@ -28,6 +30,8 @@ const EdgeInsets marginV8 = EdgeInsets.symmetric(vertical: 8);
 
 /// vertical margin 16
 const EdgeInsets marginV16 = EdgeInsets.symmetric(vertical: 16);
+
+// * horizontals
 
 /// horizontal margin 8
 const EdgeInsets marginH8 = EdgeInsets.symmetric(horizontal: 8);

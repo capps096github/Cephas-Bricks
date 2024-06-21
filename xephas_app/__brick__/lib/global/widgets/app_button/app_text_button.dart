@@ -30,7 +30,8 @@ class AppTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final buttonTextStyle = Theme.of(context).textTheme.bodyMedium!.copyWith(
+    final buttonTextStyle = TextStyle(
+        fontFamily: appFontFamily,
           color: textColor,
           fontSize: 16,
         );

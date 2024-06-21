@@ -3,25 +3,32 @@ import 'package:flutter/material.dart';
 
 import 'dart:math' as math;
 
-// app Color
+/// app Color
 const appColor = Color(0xFF{{primary_color_code.upperCase()}});
 
-// app secondary color
+/// app secondary color
 const appSecondaryColor = Color(0xFF{{secondary_color_code.upperCase()}});
 
-// app background
+/// app background
 const appBackground = Color(0xFF{{background_color_code.upperCase()}});
 
-// app white
+/// app white
 const appWhite = Color(0xFFFFFFFF);
 
-// app black
+/// app black
 const appBlack = Color(0xFF000000);
 
-// app transparent
+/// app transparent
 const appTransparent = Colors.transparent;
 
-// app random color
+/// ! ----------- error colors
+/// error yellow
+const errorYellow = Color(0xFFFFFF00);
+
+/// error color
+const errorColor = Color(0xFF8A0301);
+
+/// app random color
 Color get appRandomColor =>
     Color((math.Random().nextDouble() * 0xFFE3EEFE).toInt()).withOpacity(1.0);
 

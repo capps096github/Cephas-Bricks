@@ -45,10 +45,10 @@ class ButtonBody extends ConsumerWidget {
 
     final width = MediaQuery.of(context).size.width;
 
-    final wcmcsResponsive = ref.watch(appResponsiveProvider(context));
+    final appResponsive = ref.watch(appResponsiveProvider(context));
 
-    final isDesktop = wcmcsResponsive.isDesktopScreen;
-    final isMobile = wcmcsResponsive.isMobileScreen;
+    final isDesktop = appResponsive.isDesktopScreen;
+    final isMobile = appResponsive.isMobileScreen;
 
     /// True if It has an Icon
     final hasIconData = (iconData != null);
@@ -67,7 +67,7 @@ class ButtonBody extends ConsumerWidget {
       shadowColor: textColor.withOpacity(.2),
       visualDensity: density,
       textStyle: TextStyle(
-        fontFamily: wcmcsFontFamily,
+        fontFamily: appFontFamily,
         fontSize: isDesktop ? 16 : 14,
         fontWeight: FontWeight.w600,
       ),
@@ -75,11 +75,11 @@ class ButtonBody extends ConsumerWidget {
 
     //
     return AnimatedContainer(
-      width: isSmallButton ? null : (isMobile ? width : maxAuthWidth),
-      duration: fiftyMilliseconds,
+      width: isSmallButton ? null : (isMobile ? width : maxScreenWidth),
+      duration: quarterSeconds,
 
       /// for good looking UI o mobile we set this height to 42
-      height: isDesktop ? 56 : wcmcsButtonHeight,
+      height: isDesktop ? kDesktopButtonHeight : kButtonHeight,
       child: Tooltip(
         message: toolTip ?? text,
         textStyle: TextStyle(color: buttonColor),

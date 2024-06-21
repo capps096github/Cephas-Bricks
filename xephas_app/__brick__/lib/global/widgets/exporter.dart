@@ -1,7 +1,9 @@
 export 'app_button/exporter.dart';
 export 'disclaimer.dart';
 export 'dividers.dart';
-export 'dot.dart';
+export 'bold_title.dart';
 export 'entrance_fader.dart';
+export 'keyboard_unfocus.dart';
+export 'logo.dart';
 export 'placeholder.dart';
-export 'spaces.dart';
+export 'spacing.dart';

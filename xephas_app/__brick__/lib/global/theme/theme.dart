@@ -41,7 +41,7 @@ class AppTheme {
       tooltipTheme: const TooltipThemeData(
         textStyle: TextStyle(color: appColor),
         decoration: BoxDecoration(
-          color: appNavy,
+          color: appSecondaryColor,
           borderRadius: borderRadius4,
         ),
       ),

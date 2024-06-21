@@ -2,7 +2,7 @@ import '../../app_exporter.dart';
 
 /// This class will be used to provide all responsiveness needed in the app
 class AppResponsive {
-  /// Constructor for the WcmcsResponsive class
+  /// Constructor for the AppResponsive class
   AppResponsive({required this.context});
 
   /// context

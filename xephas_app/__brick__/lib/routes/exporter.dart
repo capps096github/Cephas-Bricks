@@ -1,4 +1,3 @@
 export 'paths.dart';
-export 'error_page.dart';
-export 'routes.dart';
+export 'router.dart';
 export 'navigator.dart';

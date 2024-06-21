@@ -1,7 +1,9 @@
 import '../../app_exporter.dart';
 
-class {{app_name.pascalCase()}}Auth extends StatelessWidget {
-  const {{app_name.pascalCase()}}Auth({super.key});
+/// This is the auth screen of the app
+class AppAuth extends StatelessWidget {
+  /// [AppAuth] constructor
+  const AppAuth({super.key});
 
   @override
   Widget build(BuildContext context) {

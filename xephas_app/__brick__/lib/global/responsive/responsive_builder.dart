@@ -22,10 +22,10 @@ class AppResponsiveBuilder extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // responsiveness
-    final wcmcsResponsive = ref.watch(appResponsiveProvider(context));
+    final appResponsive = ref.watch(appResponsiveProvider(context));
 
-    final isDesktop = wcmcsResponsive.isDesktopScreen;
-    final isTablet = wcmcsResponsive.isTabletScreen;
+    final isDesktop = appResponsive.isDesktopScreen;
+    final isTablet = appResponsive.isTabletScreen;
 
     if (isDesktop) {
       return desktop;

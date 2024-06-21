@@ -8,25 +8,11 @@ const double kVerticalDividerHeight = 150;
 const double kHorizontalDividerWidth = 60;
 
 /// button heights
-const double kButtonHeight = 42;
+const double kButtonHeight = 44;
 
 /// desktop button height
 const double kDesktopButtonHeight = 56;
 
-/// Height of the Nav Bar
-const double kNavbarHeight = 60;
-
-/// calcut button height
-const double wcmcsButtonHeight = 44;
-
-/// max width for the app auth screens
-const double maxAuthWidth = 500;
-
 /// max width for the app auth screens
 const double maxScreenWidth = 800;
 
-/// maxCardHeight
-const double maxCardHeight = 360;
-
-/// profile clipper height
-const double profileClipperHeight = 110;

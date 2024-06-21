@@ -2,33 +2,24 @@ import '../../app_exporter.dart';
 
 ///* this provides the default router delegate for the app
 final goRouterProvider = Provider<GoRouter>((ref) {
-  return {{app_name.camelCase()}}Router;
-});
-
-// router delegate
-final {{app_name.camelCase()}}Router = GoRouter(
+  return GoRouter(
   initialLocation: initialPath,
   restorationScopeId: {{app_name.camelCase()}}AppId,
   routes: [
     //* home page
     GoRoute(
       path: homePath,
-      builder: (context, state) => const {{app_name.pascalCase()}}Home(),
+      builder: (context, state) => const AppHome(),
     ),
 
     //* auth
     GoRoute(
       path: authPath,
-      builder: (context, state) => const {{app_name.pascalCase()}}Auth(),
+      builder: (context, state) => const AppAuth(),
     ),
 
     //* user
 
-    // * settings
-    GoRoute(
-      path: settingsPath,
-      builder: (context, state) => const {{app_name.pascalCase()}}Settings(),
-    ),
   ],
 
   redirect: (_, state) {
@@ -37,7 +28,6 @@ final {{app_name.camelCase()}}Router = GoRouter(
     //TODO if the user is logged in, don't redirect to any page just continue with the initial path
     return null;
   },
-  errorBuilder: (context, state) => {{app_name.pascalCase()}}ErrorScreen(error: state.error),
    onException: (context, state, _) => ErrorDisplay(
       error: state.error.toString(),
       stackTrace: StackTrace.current,
